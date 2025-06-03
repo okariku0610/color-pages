@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>色が変わるスクリーン</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      transition: background 1s;
+    }
+  </style>
+</head>
+<body>
+<script>
+  const colors = [
+    "#5CACEE",  // 青っぽい水色
+    "white",    // 白
+    "red",      // 赤
+    "#ADFF2F",  // 黄緑
+    "green",    // 緑
+    "yellow"    // 黄色
+  ];
+  let index = 0;
+
+  function changeColor() {
+    document.body.style.background = colors[index];
+    index = (index + 1) % colors.length;
+  }
+
+  changeColor(); // 初回実行
+  setInterval(changeColor, 3000); // 3秒ごとに色を変更
+</script>
+</body>
+</html>
