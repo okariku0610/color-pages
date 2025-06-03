@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ランダムな色表示</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<script>
+  const colors = [
+    "#5CACEE",  // 青っぽい水色
+    "white",    // 白
+    "red",      // 赤
+    "#ADFF2F",  // 黄緑
+    "yellow"    // 黄色
+  ];
+  const randomIndex = Math.floor(Math.random() * colors.length);
+  document.body.style.background = colors[randomIndex];
+</script>
+</body>
+</html>
